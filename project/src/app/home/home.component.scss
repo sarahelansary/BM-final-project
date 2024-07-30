@@ -62,6 +62,11 @@ button {
   background-color: hsl(347, 64%, 30%);
   color: white;
 }
+#continue:hover,
+#createaccount:hover {
+  background-color: white;
+  color: hsl(347, 64%, 30%) !important;
+}
 
 button.sidetoggle {
   background-color: rgba(228, 226, 226, 0.574);

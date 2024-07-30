@@ -23,9 +23,17 @@ button {
   background-color: hsl(347, 64%, 30%) !important;
   color: white;
 }
+#register-button:hover {
+  background-color: white !important;
+  color: hsl(347, 64%, 30%) !important;
+}
+
 .nav-link.active {
   color: hsl(347, 64%, 30%);
 }
 .navbar-nav {
   margin-left: auto;
+}
+a:hover {
+  color: hsl(347, 64%, 30%);
 }
