@@ -16,25 +16,36 @@
   </div>
 
   <div class="card-overlay">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5 class="card-title">You send</h5>
-        <input type="text" class="card-text" placeholder="" />
-        <button class="sidetoggle">
-          <img src="../../assets/Icons(SVG)/DRop down.svg" />
-        </button>
+    <div class="card-body">
+      <h5 class="card-title">You send</h5>
 
-        <h5 class="card-title">Recipient gets</h5>
-        <input type="text" class="card-text" placeholder="" />
-        <button class="sidetoggle">
-          <img src="../../assets/Icons(SVG)/DRop down.svg" />
-        </button>
-        <br />
-        <p class="card-text text-black-50">Delivery Time: By May 20th</p>
-        <button class="btn text-white btn-sm px-md-5 ms-3" id="continue">
-          Continue
-        </button>
+      <input type="text" class="card-text" placeholder="" />
+      <!-- <div class="currency">
+        <app-currency-dropdown></app-currency-dropdown>
+      </div> -->
+
+      <h5 class="card-title">Recipient gets</h5>
+      <input type="text" class="card-text" placeholder="" />
+      <!-- <div class="currency">
+        <app-currency-dropdown></app-currency-dropdown>
+      </div> -->
+      <!-- <button class="sidetoggle" (click)="toggleDropdown()"> -->
+      <!-- <img src="../../assets/Icons(SVG)/DRop down.svg" />
+      </button>
+
+      <div *ngIf="isDropdownOpen" class="dropdown-menu">
+        <a href="#" class="dropdown-item">
+          <img src="../../assets/Vectors/flags/egypt.svg" alt="Icon 2" />
+        </a>
+        <a href="#" class="dropdown-item">
+          <img src="../../assets/Vectors/flags/unitedstates.svg" alt="Icon 2" />
+        </a>
       </div>
+      <br /> -->
+      <p class="card-text text-black-50">Delivery Time: By May 20th</p>
+      <button class="btn text-white btn-sm px-md-5 ms-3" id="continue">
+        Continue
+      </button>
     </div>
   </div>
 </div>
@@ -52,16 +63,12 @@
     Getting Started
   </p>
 </div>
-<div style="padding: 0px, 11.94px, 0px, 11.94px">
-  <p style="font-size: 30px; font-weight: 600; text-align: center">
-    Lorem Ipsum is simply dummy
-  </p>
+<div style="padding: 0px, 11.94px, 0px, 11.94px" id="lorem">
+  <p>Lorem Ipsum is simply dummy</p>
   <br />
-  <p style="font-size: 30px; font-weight: 600; text-align: center">
-    text of the printing.
-  </p>
+  <p>text of the printing.</p>
 </div>
-<div class="container text-center ms-5 pt-4">
+<div class="container text-center ms-5 pt-4 pb-5">
   <div class="row">
     <div class="col">
       <div

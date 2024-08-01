@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CurrencyDropdownComponent } from '../currency-dropdown/currency-dropdown.component';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  declarations: any[] = [CurrencyDropdownComponent];
   title = 'home';
-  header = 'assets/img/header.jpg';
+  isDropdownOpen: boolean = false;
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 }

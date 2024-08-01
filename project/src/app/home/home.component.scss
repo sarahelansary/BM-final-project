@@ -5,8 +5,12 @@
   margin: auto;
   font-family: "Inter", sans-serif;
 }
-body {
-  overflow: hidden;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 .background-image {
@@ -45,12 +49,42 @@ body {
   left: 50%;
   transform: translatey(-80%);
   background: white;
-  padding: 20px;
+
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
   overflow: hidden;
   margin-left: 5rem;
+
+  padding: 50px;
+  gap: 32px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+}
+.card-body {
+  position: relative;
+  padding: 1rem;
+  margin-left: 0rem;
+}
+input {
+  width: 200px;
+  height: 30px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  margin-left: 0px;
+  position: relative;
+}
+.currency {
+  position: absolute;
+  left: 80%;
+  top: 22%;
+  width: 10rem;
+}
+#lorem p {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
 }
 
 img .card {
@@ -71,4 +105,54 @@ button {
 button.sidetoggle {
   background-color: rgba(228, 226, 226, 0.574);
   color: hsla(0, 2%, 89%, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  .overlay-content {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    margin-left: 10rem;
+  }
+
+  .card-overlay {
+    top: 70%;
+    transform: translate(-30%, -100%);
+    width: 40%;
+    padding: 3px;
+  }
+  #lorem p {
+    font-size: 20px;
+  }
 }

@@ -1,44 +1,18 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold ps-5" href="#">Speedo Transfer</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto me-5">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Money Transfer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">My Account</a>
-        </li>
-
-        <li class="nav-item ms-3">
-          <a class="btn border-black me-auto px-4" href="#" role="button"
-            >login</a
-          >
-        </li>
-        <li class="nav-item ms-3 me-2">
-          <a
-            class="btn text-sm-center"
-            href="#"
-            role="button"
-            id="register-button"
-            >Register Now</a
-          >
-        </li>
-      </ul>
-    </div>
+<nav class="w-[1490px] h-[80px] fixed top-0 navbar">
+  <div class="flex flex-row w-[1440px] h-[65px]">
+    <ul class="flex w-[1440px] justify-around">
+      <li class="logo p-2 mr-9 font-[600] text-[32px] text-[#24221E]">
+        Speedo Transfer
+      </li>
+      <div class="flex">
+        <li class="item"><a routerLink="home">Home</a></li>
+        <li class="item"><a href="#">Money Transfer</a></li>
+        <li class="item"><a href="#">My Account</a></li>
+      </div>
+      <li class="item">
+        <!-- <div class="initial">{{ getUserInitials() }}</div> -->
+        <!-- <a href="#">{{ user1?.fname }} {{ user1?.lname }}</a> -->
+      </li>
+    </ul>
   </div>
 </nav>
