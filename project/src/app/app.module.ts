@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CreatePasswordComponent } from './create-password/create-password.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     FooterComponent,
     CurrencyDropdownComponent,
     CreateAccountComponent,
+    CreatePasswordComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
