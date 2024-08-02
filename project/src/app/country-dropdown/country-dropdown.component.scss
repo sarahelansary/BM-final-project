@@ -33,12 +33,12 @@ button {
 }
 input:focus,
 button:focus,
-select:focus {
+mat-select:focus {
   outline: none;
   border-color: hsla(347, 64%, 32%, 1);
   box-shadow: 0 0 2px hsla(347, 64%, 32%, 1);
 }
-select option:hover {
+mat-select mat-option:hover {
   background-color: hsla(347, 64%, 32%, 1);
   color: white;
 }
@@ -68,7 +68,7 @@ button {
   top: 41%;
   left: 54%;
 }
-select {
+mat-select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;

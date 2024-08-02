@@ -28,7 +28,7 @@ export class CountryDropdownComponent implements OnInit {
     {
       code: 'EGP',
       name: 'EGP Pound',
-      flag: '../../assets/Vectors/flags/unitedstates.svg',
+      flag: '../../assets/Vectors/flags/egypt.svg',
     },
   ];
 
