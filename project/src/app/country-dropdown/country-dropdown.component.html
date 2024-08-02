@@ -1,0 +1,35 @@
+<!-- src/app/currency-dropdown/currency-dropdown.component.html -->
+<form [formGroup]="currencyForm">
+  <div class="label">
+    <label for="senderAmount">you send</label>
+    <input id="senderAmount" formControlName="senderAmount" type="number" />
+  </div>
+  <div class="flag">
+    <select id="senderCurrency" formControlName="senderCurrency">
+      <option *ngFor="let currency of currencies" [value]="currency.code">
+        <img [src]="currency.flag" alt="{{ currency.name }}" />
+        {{ currency.code }}
+      </option>
+    </select>
+  </div>
+  <div class="label2">
+    <label for="recipientAmount">Recipient gets</label>
+    <input
+      id="recipientAmount"
+      formControlName="recipientAmount"
+      type="number"
+      readonly
+    />
+  </div>
+  <div class="flag2">
+    <select id="recipientCurrency" formControlName="recipientCurrency">
+      <option *ngFor="let currency of currencies" [value]="currency.code">
+        <span class="flag-icon flag-icon-{{ currency.flag }}"></span>
+        {{ currency.code }}
+      </option>
+    </select>
+  </div>
+
+  <p class="text-black-50">Delivery Time: By May 20th</p>
+  <button class="btn text-white" id="continue">continue</button>
+</form>

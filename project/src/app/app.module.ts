@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { CurrencyDropdownComponent } from './currency-dropdown/currency-dropdown.component';
+
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,6 +21,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CreatePasswordComponent } from './create-password/create-password.component';
 import { LoginComponent } from './login/login.component';
+import { SharedModule } from './shared/shared.module';
+import { CountryDropdownComponent } from './country-dropdown/country-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,11 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    CurrencyDropdownComponent,
+
     CreateAccountComponent,
     CreatePasswordComponent,
     LoginComponent,
+    CountryDropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { LoginComponent } from './login/login.component';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -34,37 +34,38 @@
 }
 .overlay-content {
   position: absolute;
-  top: 55%;
-  left: 40%;
-  transform: translate(-100%, -50%);
+  top: 15%;
+  left: 10%;
   color: white;
   text-align: left;
   z-index: 2;
-  margin-left: 5px;
-  overflow: hidden;
+  margin-left: 0;
 }
 .card-overlay {
   position: absolute;
-  top: 70%;
+  top: 10%;
   left: 50%;
-  transform: translatey(-80%);
+
   background: white;
 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
-  overflow: hidden;
+
   margin-left: 5rem;
 
-  padding: 50px;
+  padding: 1rem 0;
+
   gap: 32px;
   border-radius: 8px 0px 0px 0px;
   opacity: 0px;
 }
+.card {
+  padding: 0 5rem;
+}
 .card-body {
-  position: relative;
-  padding: 1rem;
-  margin-left: 0rem;
+  padding: 2rem 0;
+  margin-right: 5rem;
 }
 input {
   width: 200px;
@@ -74,6 +75,11 @@ input {
   opacity: 0px;
   margin-left: 0px;
   position: relative;
+}
+select {
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  padding: 5px 2rem;
 }
 .currency {
   position: absolute;
@@ -96,11 +102,6 @@ button {
   background-color: hsl(347, 64%, 30%);
   color: white;
 }
-#continue:hover,
-#createaccount:hover {
-  background-color: white;
-  color: hsl(347, 64%, 30%) !important;
-}
 
 button.sidetoggle {
   background-color: rgba(228, 226, 226, 0.574);
@@ -109,32 +110,8 @@ button.sidetoggle {
   cursor: pointer;
 }
 
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  margin-top: 10px;
-  width: 200px; /* Adjust width as needed */
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
 
 @media (max-width: 480px) {
