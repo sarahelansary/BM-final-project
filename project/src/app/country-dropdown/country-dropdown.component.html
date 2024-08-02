@@ -1,13 +1,29 @@
-<!-- src/app/currency-dropdown/currency-dropdown.component.html -->
 <form [formGroup]="currencyForm">
   <div class="label">
     <label for="senderAmount">you send</label>
     <input id="senderAmount" formControlName="senderAmount" type="number" />
   </div>
   <div class="flag">
-    <mat-form-field>
-      <mat-select id="senderCurrency" formControlName="senderCurrency">
-        <mat-option *ngFor="let currency of currencies" [value]="currency.code">
+    <mat-form-field class="mat-form-field">
+      <mat-select
+        id="senderCurrency"
+        formControlName="senderCurrency"
+        class="mat-select"
+      >
+        <mat-select-trigger>
+          <img
+            *ngIf="selectedCurrency"
+            [src]="selectedCurrency.flag"
+            class="flag-icon"
+            alt="Flag"
+          />
+          {{ selectedCurrency ? selectedCurrency.code : "" }}
+        </mat-select-trigger>
+        <mat-option
+          class="mat-option"
+          *ngFor="let currency of currencies"
+          [value]="currency.code"
+        >
           <img [src]="currency.flag" alt="{{ currency.name }}" />
           {{ currency.code }}
         </mat-option>
@@ -24,9 +40,23 @@
     />
   </div>
   <div class="flag2">
-    <mat-form-field>
-      <mat-select id="recipientCurrency" formControlName="recipientCurrency">
+    <mat-form-field class="mat-form-field">
+      <mat-select
+        id="recipientCurrency"
+        formControlName="recipientCurrency"
+        class="mat-select"
+      >
+        <mat-select-trigger>
+          <img
+            *ngIf="selectedCurrency"
+            [src]="selectedCurrency.flag"
+            class="flag-icon"
+            alt="Flag"
+          />
+          {{ selectedCurrency ? selectedCurrency.code : "" }}
+        </mat-select-trigger>
         <mat-option
+          class="mat-option"
           *ngFor="let currency of currencies"
           [value]="currency.code"
           selected
@@ -37,7 +67,8 @@
       </mat-select>
     </mat-form-field>
   </div>
-
-  <p class="text-black-50">Delivery Time: By May 20th</p>
-  <button class="btn text-white" id="continue">continue</button>
+  <section>
+    <p class="text-black-50">Delivery Time: By May 20th</p>
+    <button class="btn">continue</button>
+  </section>
 </form>

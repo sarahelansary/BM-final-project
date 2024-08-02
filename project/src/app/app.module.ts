@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,18 +11,19 @@ import { FooterComponent } from './footer/footer.component';
 
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatSelectModule } from '@angular/material/select';
 
-import { MatInputModule } from '@angular/material/input';
+// import { MatInputModule } from '@angular/material/input';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatNativeDateModule } from '@angular/material/core';
 import { CreatePasswordComponent } from './create-password/create-password.component';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { CountryDropdownComponent } from './country-dropdown/country-dropdown.component';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -42,16 +43,11 @@ import { CountryDropdownComponent } from './country-dropdown/country-dropdown.co
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-
-    MatButtonModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
+    AngularMaterialModule,
     SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

@@ -53,8 +53,6 @@ export class CountryDropdownComponent implements OnInit {
     const { senderAmount, senderCurrency, recipientCurrency } =
       this.currencyForm.value;
 
-    // Implement your logic to get the conversion rate between senderCurrency and recipientCurrency
-    // For demonstration, let's assume a dummy conversion rate
     const conversionRate = this.getConversionRate(
       senderCurrency,
       recipientCurrency
@@ -74,5 +72,11 @@ export class CountryDropdownComponent implements OnInit {
     // Replace this with actual conversion rate fetching logic
     // For demonstration, let's assume a fixed conversion rate of 1.1 for all currencies
     return 1.1;
+  }
+  get selectedCurrency(): Currency | undefined {
+    return this.currencies.find(
+      (currency) =>
+        currency.code === this.currencyForm.controls['senderCurrency'].value
+    );
   }
 }

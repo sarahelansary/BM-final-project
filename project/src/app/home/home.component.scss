@@ -63,30 +63,14 @@
 .card {
   padding: 0 5rem;
 }
+.card-title {
+  display: block;
+}
 .card-body {
   padding: 2rem 0;
   margin-right: 5rem;
 }
-input {
-  width: 200px;
-  height: 30px;
-  gap: 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-  margin-left: 0px;
-  position: relative;
-}
-select {
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-  padding: 5px 2rem;
-}
-.currency {
-  position: absolute;
-  left: 80%;
-  top: 22%;
-  width: 10rem;
-}
+
 #lorem p {
   font-size: 30px;
   font-weight: 600;
@@ -95,23 +79,6 @@ select {
 
 img .card {
   margin: 20px 0;
-}
-button {
-  border-style: none;
-  border-color: black;
-  background-color: hsl(347, 64%, 30%);
-  color: white;
-}
-
-button.sidetoggle {
-  background-color: rgba(228, 226, 226, 0.574);
-  color: hsla(0, 2%, 89%, 1);
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
 
 @media (max-width: 480px) {

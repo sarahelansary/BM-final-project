@@ -9,8 +9,11 @@
 form {
   max-width: 400px;
   min-height: 10vh;
-  margin-right: 10%;
-  overflow-y: auto;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 div {
@@ -22,17 +25,15 @@ label {
   display: block;
   margin: bottom 5px;
 }
-
-input,
-button {
+input {
   width: 100%;
-  padding: 10px;
+  padding: 15px 5%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: right 10px;
+  margin-right: 5rem;
 }
+
 input:focus,
-button:focus,
 mat-select:focus {
   outline: none;
   border-color: hsla(347, 64%, 32%, 1);
@@ -46,8 +47,14 @@ button {
   background-color: hsla(347, 64%, 32%, 1);
   color: white;
   border: none;
-  cursor: pointer;
+
   border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+button:hover {
+  color: hsla(347, 64%, 32%, 1);
+  background-color: white;
 }
 
 .label {
@@ -56,8 +63,8 @@ button {
 
 .flag {
   position: absolute;
-  top: 15%;
-  left: 54%;
+  top: 12%;
+  left: 63%;
 }
 .label2 {
   position: relative;
@@ -65,20 +72,34 @@ button {
 
 .flag2 {
   position: absolute;
-  top: 41%;
-  left: 54%;
-}
-mat-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
+  top: 40%;
+  left: 63%;
 }
 
 option img {
   margin-right: 8px;
   display: block;
   padding: 10 10px;
+}
+::ng-deep .mat-form-field {
+  width: 75%;
+
+  padding: 1px;
+  border: none;
+}
+
+::ng-deep .mat-select {
+  border: none;
+  padding: 0 10px;
+  margin: 0px;
+}
+::ng-deep .mat-option [value] {
+  font-size: xx-small;
+  padding: 10px;
+}
+.flag-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
